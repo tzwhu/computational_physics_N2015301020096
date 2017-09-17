@@ -1,6 +1,6 @@
 # Homework List
  
->* [Exercise_01:Print your name](https://www.zybuluo.com/mdeditor#882030)<br>
+>* [Exercise_01:Print your name](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/print%20your%20name)<br>
 >* [Exercise:The decay of two kinds of particles](https://www.zybuluo.com/mdeditor#882113)<br>
 >* [Exercise:Population growth](https://www.zybuluo.com/mdeditor#882120)<br>
 >* [Exercise:The cannon](https://www.zybuluo.com/mdeditor#882138)<br>
