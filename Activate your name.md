@@ -4,6 +4,7 @@
 > * 设置字母的字体为20的Times字体。<br>
 > * 结束后输出“”end“”<br>
 ### 实现流程
+
 ```flow
 st=>start: 调用Tkinter和 time 模块，布置画布
 op=>operation: 用font设置字体
