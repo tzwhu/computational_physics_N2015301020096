@@ -1,5 +1,5 @@
 >print("TangZhe")<br>
 print(" 唐哲")<br>
-Spyder运行结果：
-![结果](https://app.yinxiang.com/shard/s7/res/a256345b-e4e7-4d05-8e5f-5b9a82123e36/%E6%88%AA%E5%9B%BE.png)
+运行结果：
+![结果](https://user-images.githubusercontent.com/31878522/30745945-9dafafae-9fda-11e7-891c-1c859f1bf24c.png)
 
