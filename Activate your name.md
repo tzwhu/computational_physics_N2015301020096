@@ -12,5 +12,7 @@
 > * 二次曲线范围（0,0）->(20,400)
 > * 二次曲线移动延迟时间：0.05s<br>
 > * 直线返回延迟时间：0.05s<br>
+### 以turtle进行路径演示
+![turtle]()
  
 > * [源代码](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/02%20code)
