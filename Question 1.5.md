@@ -64,6 +64,17 @@
 ![image.6](https://user-images.githubusercontent.com/31878522/31002537-e188883e-a51d-11e7-81c3-46390dfe24b3.PNG)
 ![image.7](https://user-images.githubusercontent.com/31878522/31002566-0f9cf3c2-a51e-11e7-8a2f-066246d829e4.PNG)
 
+2.结果的检验
+> * 两粒子数在任意时间之和应为100不变
+> * 在足够长的时间后，NA=NB，粒子数应都趋向于50
+当deta足够小（=0.01s时），符合以上检验要求
+> * 与精确解的图像对比
+该方程的解析解为<br>
+NA=50+50e^(-2t)<br>
+NB=50-50e^(-2t)<br>
+
+
+
 
 
 
