@@ -79,7 +79,7 @@ NB=50-50e^(-2t)<br>
 检验NA:
 
 ![check](https://user-images.githubusercontent.com/31878522/31006553-a9170612-a52f-11e7-831a-7e2608912124.PNG)<br>
-检验NB:
+检验NB:[源代码](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/check%20ne2.txt)
 
 ![check](https://user-images.githubusercontent.com/31878522/31006930-59c89be6-a531-11e7-9506-903dcd77bb29.PNG)
  
