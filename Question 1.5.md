@@ -54,8 +54,8 @@
 
 ![image.1](https://user-images.githubusercontent.com/31878522/31004854-c613879c-a528-11e7-8af9-c42d9a31ecf5.PNG)
 
-减小误差的方法：选择更小的deta，以获得更精确的结果。
-> 不同deta时的图像对比：( deta从大到小)
+> * 减小误差的方法：选择更小的deta，以获得更精确的结果。
+> * 不同deta时的图像对比：( deta从大到小)
 
 ![image.2](https://user-images.githubusercontent.com/31878522/31002878-930c47ac-a51f-11e7-9a55-bda188ac4d5c.PNG)
 ![immage.3](https://user-images.githubusercontent.com/31878522/31002713-d30b2d2e-a51e-11e7-9647-95a039892fb2.PNG)
