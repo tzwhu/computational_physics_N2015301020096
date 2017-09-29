@@ -14,7 +14,7 @@
 
 ### 计算结果示例( deta=0.01s )
 ![image](https://user-images.githubusercontent.com/31878522/31002566-0f9cf3c2-a51e-11e7-8a2f-066246d829e4.PNG)
-### 计算过程：
+### 计算过程： [源代码](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/02%20code)
 > * 欧拉法计算
 
     NA=NA+(NB-NA)*deta 
