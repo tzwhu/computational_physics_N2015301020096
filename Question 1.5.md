@@ -56,6 +56,7 @@
 
 减小误差的方法：选择更小的deta，以获得更精确的结果。
 > 不同deta时的图像对比：( deta从大到小)
+
 ![image.2](https://user-images.githubusercontent.com/31878522/31002878-930c47ac-a51f-11e7-9a55-bda188ac4d5c.PNG)
 ![immage.3](https://user-images.githubusercontent.com/31878522/31002713-d30b2d2e-a51e-11e7-9647-95a039892fb2.PNG)
 ![image.4](https://user-images.githubusercontent.com/31878522/31002693-b40c748c-a51e-11e7-82a7-405ce2ee312a.PNG)
