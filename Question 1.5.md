@@ -51,6 +51,7 @@
 > * 当由第一个算式计算完NA，实际上此时已是1*deta时的NA（而非初值）代入下一式计算NB。
 > * 若deta选取过大，如1s时，计算后NA直接为0，与初值相差甚远。
 > * 图像将退化为
+
 ![image.1](https://user-images.githubusercontent.com/31878522/31004854-c613879c-a528-11e7-8af9-c42d9a31ecf5.PNG)
 
 减小误差的方法：选择更小的deta，以获得更精确的结果。
