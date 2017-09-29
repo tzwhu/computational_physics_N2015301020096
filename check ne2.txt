@@ -1,0 +1,29 @@
+import math
+import pylab as pl  
+NE2=0
+NA=100
+NB=0
+TIME=0
+deta=0.001
+time=[0]
+ye2=[0]
+yb=[0]
+while TIME<=50:
+    TIME=TIME+deta
+    NE2=50-50*math.exp(TIME*-2)
+    NA=NA+(NB-NA)*deta
+    NB=NB+(NA-NB)*deta
+    time.append(TIME)
+    ye2.append(NE2)
+    yb.append(NB)
+else:
+    print ("deta=",deta,"s")
+    plot1=pl.plot(time,ye2,'r',label='NB:exact result ')
+    plot2=pl.plot(time,yb,'b',label='NB:numerical values ')
+    pl.title('Question *1.5 ')
+    pl.xlabel('time/s')
+    pl.ylabel('N')
+    pl.xlim(0, 52)
+    pl.ylim(0, 110)
+    pl.legend(loc = 'best')
+pl.show()
