@@ -41,6 +41,33 @@
     pl.legend(loc = 'best')               #设置标签
     pl.show()
 ## 结果分析
+1.误差分析：
+当deta接近题中所述的时间常数1s时，结果将无法连续变化产生较大误差。
+如取1s，此时计算结果将退化为（t，NA,NB）=(1，0，0)
+之后粒子数皆不变，NA,NB始终为0
+但事实上将题中两微分式相加，d（NA+NB）/dt=0,即两粒子之和不随时间变化，在任意时刻都为100。
+结果显然不对。
+>误差来自于：
+> * 当由第一个算式计算完NA，实际上此时已是1*deta时的NA（而非初值）代入下一式计算NB。
+> * 若deta选取过大，如1s时，计算后NA直接为0，与初值相差甚远。
+> * 图像将退化为
+![image.1](https://user-images.githubusercontent.com/31878522/31004854-c613879c-a528-11e7-8af9-c42d9a31ecf5.PNG)
+
+减小误差的方法：选择更小的deta，以获得更精确的结果。
+> 不同deta时的图像对比：( deta从大到小)
+![image.2](https://user-images.githubusercontent.com/31878522/31002878-930c47ac-a51f-11e7-9a55-bda188ac4d5c.PNG)
+![immage.3](https://user-images.githubusercontent.com/31878522/31002713-d30b2d2e-a51e-11e7-9647-95a039892fb2.PNG)
+![image.4](https://user-images.githubusercontent.com/31878522/31002693-b40c748c-a51e-11e7-82a7-405ce2ee312a.PNG)
+![image.5](https://user-images.githubusercontent.com/31878522/31002609-4dbbac16-a51e-11e7-9e7a-62caf9737326.PNG)
+![image.6](https://user-images.githubusercontent.com/31878522/31002537-e188883e-a51d-11e7-81c3-46390dfe24b3.PNG)
+![image.7](https://user-images.githubusercontent.com/31878522/31002566-0f9cf3c2-a51e-11e7-8a2f-066246d829e4.PNG)
+
+
+
+
+
+
+
 
 
 
