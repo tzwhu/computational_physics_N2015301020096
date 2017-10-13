@@ -1,0 +1,43 @@
+import math
+
+def f1(a,b,c):
+    degree=a
+    V=b
+    g=c
+    a=math.radians(degree)
+    COS=math.cos(a)
+    SIN=math.sin(a)
+    VXI=V*COS
+    VYI=V*SIN
+    VX=VXI
+    VY=VYI
+    VY=VYI
+    TIME=0
+    deta=0.01
+    X=0
+    Y=0
+    x=[0]
+    y=[0]
+    time=[0]
+    vx=[VXI]
+    vy=[VYI]
+    while Y>=0:
+         TIME=TIME+deta
+         VX=VX
+         Y=Y+VY*deta
+         VY=VY-g*deta
+         X=X+VX*deta
+         time.append(TIME)
+         vx.append(VX)
+         vy.append(VY)
+         x.append(X)
+         y.append(Y)
+    else:
+        xlast=x[-1]
+        xlast2=x[-2]
+        ylast=y[-1]
+        ylast2=y[-2]
+        r=-(ylast/ylast2)
+        xl=(xlast+r*xlast2)/(r+1)
+        S=round(xl,3)
+        return S
