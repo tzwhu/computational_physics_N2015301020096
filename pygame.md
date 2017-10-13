@@ -1,8 +1,8 @@
 >*  由于一直未能成功安装pygame
-![image](https://user-images.githubusercontent.com/31878522/31556645-6a1a7990-b078-11e7-84e5-c082721dadfd.png)，
-拟写了：“以45度出射，初速度300m/s，重力加速度取为10m/s^2”的轨迹程序。
-在这个程序中，背景为一拟'sky'的图片；
-炮弹的图案为一拟'cannon'的图片。
+![image](https://user-images.githubusercontent.com/31878522/31556645-6a1a7990-b078-11e7-84e5-c082721dadfd.png)，<br>
+拟写了：“以45度出射，初速度300m/s，重力加速度取为10m/s^2”的轨迹程序。<br>
+在这个程序中，背景为一拟'sky'的图片；<br>
+炮弹的图案为一拟'cannon'的图片。<br>
 > * **代码部分:**
 
 
