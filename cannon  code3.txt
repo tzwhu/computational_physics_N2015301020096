@@ -1,0 +1,31 @@
+import math
+import pylab as pl  
+
+pl.figure(1)
+pl.style.use('bmh')
+pl.title('Wind Effect:deta S-degree')
+pl.xlabel('degree/ °')
+pl.ylabel('deta S /m')
+pl.xlim(0,90)
+pl.ylim(0,100000)
+vtest=700
+VTEST=[]
+while vtest<=1000:
+    degreeTEST=1
+    DEGREETEST=[degreeTEST]
+    detas=n(degreeTEST,vtest,10)
+    DETAS=[detas]
+    while degreeTEST<=89:
+         detas=n(degreeTEST,vtest,10)
+         DEGREETEST.append(degreeTEST)
+         DETAS.append(detas)
+         degreeTEST=degreeTEST+1
+    else:
+         r=vtest
+         pl.plot(DEGREETEST,DETAS,label=r)
+        
+         vtest=vtest+50
+else:
+    pl.legend(loc = 'best')
+    pl.show() 
+    print("over")
