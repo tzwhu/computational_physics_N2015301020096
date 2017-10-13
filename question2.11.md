@@ -37,7 +37,7 @@
 >* 有反向风来的变动率曲线（change rate-degree）:
 **0.5m/s-10m/s**
 ![image](https://user-images.githubusercontent.com/31878522/31553819-411a1910-b06e-11e7-91c2-168d7cfe523b.png)
-> * 速度微增的变动率曲线（change rate-degree）:
+> * 速度微增的变动率曲线（change rate-degree）:<br>
 ![image](https://user-images.githubusercontent.com/31878522/31554674-e22bb1d6-b070-11e7-876f-9b5120f9a872.png)
 
 ## 实现思路：
