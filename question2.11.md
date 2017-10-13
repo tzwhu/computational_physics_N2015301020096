@@ -31,6 +31,15 @@
 
 ![image](https://user-images.githubusercontent.com/31878522/31550980-b6f27e24-b065-11e7-8812-986976be6ff3.png)![image](https://user-images.githubusercontent.com/31878522/31550754-f577650c-b064-11e7-9c2a-2e1c12f489fd.png)
 
+>* 有正向风来的变动率曲线（change rate-degree）:
+**0.5m/s-10m/s**
+![image](https://user-images.githubusercontent.com/31878522/31554321-c84c9682-b06f-11e7-81d6-7cd6e72e650d.png)
+>* 有反向风来的变动率曲线（change rate-degree）:
+**0.5m/s-10m/s**
+![image](https://user-images.githubusercontent.com/31878522/31553819-411a1910-b06e-11e7-91c2-168d7cfe523b.png)
+> * 速度微增的变动率曲线（change rate-degree）:
+![image](https://user-images.githubusercontent.com/31878522/31554674-e22bb1d6-b070-11e7-876f-9b5120f9a872.png)
+
 ## 实现思路：
 >*	设计循环，以欧拉法计算一固定出射角度，出射速度，重力加速度的抛物线轨道，并计算落点；
 >*	将循环改写为函数   f1(a,b,c)，
@@ -160,6 +169,8 @@ n用来计算考虑风阻作用时的射程差;
 ## 结论：
 > * 两种微小变化情景对炮弹射程均有影响
 > * 两种情景在出射速度较高时造成的差异巨大；风正向吹来时，射程变化更加显著。
+> * 增加风力作用时，变动率随着速度发生变化
+> * 速度微增时，变动率几乎不发生变化
 
 
 
