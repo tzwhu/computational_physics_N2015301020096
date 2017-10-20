@@ -19,7 +19,7 @@
 >* **图中每一条不同颜色的线，代表的是不同的出射角度，单位是°**
 >* **每一张图中左方的注释，代表的是图中（多条线）的共同速度，单位是m/s**
 
-![image]https://user-images.githubusercontent.com/31878522/31820602-a090bfdc-b5d4-11e7-820f-af097eb7d296.png) 
+![image](https://user-images.githubusercontent.com/31878522/31820602-a090bfdc-b5d4-11e7-820f-af097eb7d296.png) 
 
 > * **在高的出射速度下(1000m/s)**
 
