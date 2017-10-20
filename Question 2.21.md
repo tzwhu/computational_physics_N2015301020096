@@ -11,8 +11,8 @@
 >* 影响该轨迹的因素有  **出射角度(degree)** 和 **出射速度（V）** <br>
 
 
-( 作出球飞行轨迹的**投影**研究 )
-![image](https://user-images.githubusercontent.com/31878522/31812756-a2ba5f7a-b5b6-11e7-9659-c3acefaff155.PNG)
+( 作出球飞行轨迹在z-x平面内的**投影**研究 )
+![image](https://user-images.githubusercontent.com/31878522/31824602-18a77f94-b5e2-11e7-8eb6-455e22a23bf3.PNG)
 
 
 
