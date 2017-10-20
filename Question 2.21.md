@@ -27,7 +27,7 @@
 ![image](https://user-images.githubusercontent.com/31878522/31821119-95fca020-b5d6-11e7-9476-b8d8e15b2aeb.png) 
 
 
-> * **在高的出射速度下(1000m/s)**
+> * **高速(1000m/s)与相对低速的比较**
  
 ![image](https://user-images.githubusercontent.com/31878522/31810243-95b7fc78-b5ad-11e7-9cbd-a93f0520aa78.PNG)
 
