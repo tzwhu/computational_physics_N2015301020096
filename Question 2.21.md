@@ -34,7 +34,10 @@
  
 ![image](https://user-images.githubusercontent.com/31878522/31823682-7325a4e4-b5df-11e7-9c58-98957a585a09.png)
 
-
+> * **角速度方向相反的轨迹比较**
+> * **极其低的角速度（趋于退化成抛物线，无z分量）**
+ 
+![image](https://user-images.githubusercontent.com/31878522/31826223-0d6086ee-b5e7-11e7-83c6-4c2b41b9a13a.png) 
 ## 实现程序：
 **Ⅰ.[源代码](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/2.21%20.txt)**
 **Ⅱ.计算部分**
