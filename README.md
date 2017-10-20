@@ -5,6 +5,7 @@
 >- [x] [Question 1.5](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/Question%201.5.md)
 >- [x] [pygame:  cannon](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/pygame.md)
 >- [x] [Question 2.11](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/question2.11.md)
+>- [x] [Question 2.21](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/question2.11.md)
 >* [Exercise:The decay of two kinds of particles](https://www.zybuluo.com/mdeditor#882113)<br>
 >* [Exercise:Population growth](https://www.zybuluo.com/mdeditor#882120)<br>
 >* [Exercise:The cannon](https://www.zybuluo.com/mdeditor#882138)<br>
