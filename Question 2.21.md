@@ -16,13 +16,13 @@
 
 
 **说明：我们将在下面的图示中，将其他因素作为自变量，画出z-x平面内的不同轨迹**
->* **图中每一条不同颜色的线，代表的是不同的出射角度，单位是°**
->* **每一张图中左方的注释，代表的是图中（多条线）的共同速度，单位是m/s**
+>* **每一张子图中所有轨迹初速相同；以不同颜色的线，代表不同的出射角度比较，单位是°**
+>* **每一张子图中左方的注释，代表的是该图中（多条线）的共同初速度，单位是m/s**
 
-![image](https://user-images.githubusercontent.com/31878522/31820602-a090bfdc-b5d4-11e7-820f-af097eb7d296.png) 
+![image](https://user-images.githubusercontent.com/31878522/31821432-ad95d69c-b5d7-11e7-98fc-8f0770324448.png) 
 
 > * **在高的出射速度下(1000m/s)**
-
+ 
 ![image](https://user-images.githubusercontent.com/31878522/31810243-95b7fc78-b5ad-11e7-9cbd-a93f0520aa78.PNG)
 
 
