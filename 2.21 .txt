@@ -1,0 +1,102 @@
+import pylab as pl  
+import math
+
+
+def z(a,b,c):
+    degree=a
+    V0=b
+    XS=c
+    
+    DEGREE=math.radians(degree) #计算y-平面内的水平，竖直初速
+    COS=math.cos(DEGREE)
+    SIN=math.sin(DEGREE)
+    VXI=V0*COS
+    VYI=V0*SIN
+    VX=VXI     #赋予初值
+    VY=VYI
+    VZ=0
+    
+    deta=0.01
+    w=(200*3.141592653)/3
+    
+    TIME=0      #定义各变量和对应数组
+    X=0
+    Y=0
+    Z=0 
+    time=[0]
+    x=[0]
+    y=[0]
+    z=[0]
+    
+    vx=[VXI]
+    vy=[VYI]
+    vz=[0]
+    v=[]
+    P=[]
+    
+    while X<=XS:
+        V=math.sqrt(VX**2+VY**2+VZ**2)    #系数表达式
+        p=(V-35)/5
+        p1=round(p,4)
+        E=1+math.exp(p1)
+        b=0.0039+0.0058/E
+        u=4.1/10000
+        
+        
+        X=X+VX*deta                       #计算过程
+        Y=Y+VY*deta
+        Z=Z+VZ*deta
+        
+        VX=VX-b*V*VX*deta
+        VY=VY-10*deta
+        VZ=VZ-10*u*VX*w*deta
+        
+        TIME=TIME+deta
+        
+        vx.append(VX)     #数组记录
+        vy.append(VY)
+        vz.append(VZ)
+        v.append(V)
+        
+        time.append(TIME)
+        x.append(X)
+        y.append(Y)
+        z.append(Z)
+        P.append(p)
+    else:   
+        pl.figure(1)   #设置画布
+        
+        pl.style.use('bmh')
+        pl.xlim(0,100)
+        pl.ylim(-230,50)
+        r="trajectory in the Z-X plane "
+        pl.title(r,color='blue',size=18)
+
+        pl.xlabel('x/m',size=15)
+        pl.ylabel('z/m',size=15)
+        pl.text(0, -100,'$Speed:$',  
+         fontdict={'size': 18})  
+        pl.text(17, -100,V0,size=16)  
+
+       
+        pl.plot(x,z,label=degree)
+        
+        return 0
+
+    
+
+
+B=50
+while B<=126:
+    A=15
+    while A<=60:
+        pl.figure(1)
+        z(A,B,99)
+        A=A+10
+    else:
+        pl.legend(loc='lower left')
+       
+        B=B+15
+        pl.show()
+else:
+    print("over")
