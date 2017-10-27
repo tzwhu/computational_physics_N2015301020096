@@ -1,0 +1,73 @@
+import math
+import pylab as pl
+
+
+pl.figure(figsize=(10,10)) 
+pl.title('ω versus θ',size=15)
+pl.text(2.4, 0.75,'$F_D=1.2$',fontdict={'size': 20, 'color': 'k'})   #设置注释
+pl.text(2.45, 0.55,'$\Omega$'' = 2/3',fontdict={'size': 20, 'color': 'k'})  
+pl.xlabel('θ (radians)',size=14)
+pl.ylabel('ω (radians/s)',size=14)
+pl.xlim(-4,4)
+pl.ylim(-2,1)
+
+
+
+def F(Fd,Ω,TS):
+    ω=0
+    θ=0.2
+    t=0
+    deta=0.04
+    pi=math.pi
+    
+    W=[ω]
+    Theta=[θ]
+    T=[t]
+
+    
+    while t<=TS:
+        sin1=math.sin(θ) 
+        sin2=math.sin(Ω*t)
+        ω=ω+(-sin1-0.5*ω+Fd*sin2)*deta
+        θ=θ+ω*deta
+        
+        while θ>pi:
+            θ=θ-2*pi
+        else:
+            θ=θ
+            
+        while θ<-1*pi:
+            θ=θ+2*pi
+        else:
+            θ=θ
+            
+        t=t+deta
+        k=Ω*t
+        K=[]
+    
+        while k>0:
+           K.append(k)
+           k=k-2*pi
+        else:
+           K.append(k)
+           i=K[-1]
+           j=K[-2]
+    
+        if abs(i)>abs(j):
+            min=abs(j)
+        else:
+            min=abs(i)
+    
+        if min<0.02*Ω:
+           W.append(ω)
+           Theta.append(θ)
+           T.append(t)
+        else:
+           T.append(t)
+    else:
+       
+        pl.scatter(Theta,W,marker = 'o', color = 'r', s=0.4)
+        return 0
+    
+    F(1.2,2/3,10000)
+    pl.show()
