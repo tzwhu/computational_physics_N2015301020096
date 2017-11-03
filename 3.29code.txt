@@ -1,0 +1,87 @@
+import pylab as pl
+
+
+X=[1]
+Y=[0]
+Z=[0]
+T=[0]
+
+def H(r,TS):
+    x=1
+    y=0
+    z=0
+    t=0
+    deta=0.0001
+    while t<=TS:
+        a=x+10*(y-x)*deta
+        b=y+(-x*z+r*x-y)*deta
+        c=z+(x*y-(8/3)*z)*deta
+        
+        x=a
+        y=b
+        z=c
+        
+        t=t+deta
+        
+        X.append(x)
+        Y.append(y)
+        Z.append(z)
+        T.append(t)
+    else:
+        pl.figure(figsize=(10,10)) 
+        pl.title('$Z-T$',size=15)  
+        pl.xlabel('$T$',size=14)
+        pl.ylabel('$Z$',size=14)
+        pl.xlim(0,TS+0.3) 
+        pl.ylim(0,max(Z)*1.45)
+        pl.plot(T,Z,'r',linewidth=1,label=r)
+        pl.legend(loc='best')
+        return 0
+
+
+def M(r,TS):
+    i=1         #计数变量
+    Z1=[]       #记录Z的峰值
+    T1=[]      #记录峰值对应的时刻
+    H(r,TS)
+    while i<len(Z)-1:
+        ztest=Z[i]
+        zl=Z[i-1]
+        zr=Z[i+1]
+        if (ztest>zl and ztest>zr):
+            Z1.append(ztest)
+            T1.append(T[i])
+            i=i+1
+        else:
+            i=i+1
+    else:
+        pl.plot(T1,Z1,color='g',linewidth=1,marker='o',ms=3)
+        pl.show()
+        
+        m=1   #m记录的是第m段间距，即m-(m+1)个最大值之间的时间差
+        Td=[]
+        M=[]
+    while m<=len(Z1)-1:
+        td=T1[m]-T1[m-1]
+        Td.append(td)
+        M.append(m)
+        m=m+1
+    else:
+        pl.figure(figsize=(16,4)) 
+        pl.title('$\Delta T-m$',size=15)  
+        pl.xlabel('$m$',size=14)
+        pl.ylabel('$\Delta T/s$',size=14)
+        pl.xlim(0,M[-1]+1) 
+        pl.ylim(0,max(Td)*1.45)
+        
+        pl.plot(M,Td,linestyle=':',color='k',linewidth=1,marker='o',ms=3,label=r)
+        pl.legend(loc='best')
+        pl.show()
+
+        pl.figure(figsize=(10,10)) 
+        pl.hist(Td,500,facecolor='g',alpha=0.95)
+        pl.show()
+        return 0
+
+
+M(165,100)
