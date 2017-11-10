@@ -1,0 +1,306 @@
+print("hello")#椭圆
+import math
+import pylab as pl
+
+def G(x,y,vx,vy,a,b,TS):
+    t=0
+    X=[x]
+    Y=[y]
+    VX=[vx]
+    VY=[vy]
+    T=[0]
+    deta=0.01
+    while t<TS:
+        while (x**2)/(a**2)+(y**2)/(b**2)<=1:
+            x=x+vx*deta
+            y=y+vy*deta
+            vx=vx
+            vy=vy
+            t=t+deta
+    
+            X.append(x)
+            Y.append(y)
+            VX.append(vx)
+            VY.append(vy)
+            T.append(t)
+        else: 
+            X.remove(X[-1])
+            Y.remove(Y[-1])
+            VX.remove(VX[-1])
+            VY.remove(VY[-1])
+            T.remove(T[-1])
+    
+            x=X[-1]
+            y=Y[-1]
+            vx=VX[-1]
+            vy=VY[-1]
+            deta1=deta/100  
+            
+        while (x**2)/(a**2)+(y**2)/(b**2)<=1:
+            x=x+vx*deta1
+            y=y+vy*deta1
+            vx=vx
+            vy=vy
+            t=t+deta1
+    
+            X.append(x)  #数组的最后一个值为小步长达到的界外x,y坐标
+            Y.append(y)
+            VX.append(vx)
+            VY.append(vy)
+        else:          #以小步长达到界外后，需要计算反射之后的水平，竖直速度
+            e=vx*((a**4)*(y**2)-(b**4)*(x**2))-2*x*y*vy*(a**2)*(b**2)
+            f=(b**4)*(x**2)+(a**4)*(y**2)
+            
+            m=vy*((b**4)*(x**2)-(a**4)*(y**2))-2*x*y*vx*(a**2)*(b**2)
+            n=(b**4)*(x**2)+(a**4)*(y**2)
+      
+            vx=e/f
+            vy=m/n
+            
+            x=x+vx*deta
+            y=y+vy*deta
+            t=t+deta
+      
+            X.append(x)  #，此时记录的是以原步长进行移动的坐标（返回界内）
+            Y.append(y)
+            VX.append(x)
+            VY.append(y)
+            T.append(t)
+            T.append(t)
+    else:
+        pl.figure(figsize=(3*a,3*b)) 
+        pl.title('Elliptical Table',size=15)
+        pl.xlabel('x',size=14)
+        pl.ylabel('y',size=14)
+        pl.xlim(-a,a)
+        pl.ylim(-b,b)
+        pl.plot(X,Y,color='g',linewidth=0.5,label=round(math.atan(VY[0]/VX[0]),9))
+        pl.legend(loc='upper left')
+        pl.show()
+       
+        return 0  
+
+
+k=0.01
+while k<=0.01:
+     a=2/k
+     G(0,0,0.1,0.1,a,2,1000)
+     k=k+0.1
+else:
+     print("over")
+
+import math#方桌子圆形障碍物
+import pylab as pl
+
+print("hello")
+def A(x,y,vx,vy,a,TS):
+    t=0
+    X=[x]
+    Y=[y]
+    VX=[vx]
+    VY=[vy]
+    T=[0]
+    deta=0.0001
+    while t<=TS:
+        while x**2+y**2>=1 and abs(x)<=a/2 and abs(y)<=a/2:
+            x=x+vx*deta
+            y=y+vy*deta
+            vx=vx
+            vy=vy
+            t=t+deta
+    
+            X.append(x)
+            Y.append(y)
+            VX.append(vx)
+            VY.append(vy)
+            T.append(t)
+        else:
+             if x**2+y**2<1: #处理第一种：达到内圆边界
+                  X.remove(X[-1]) #先返回界内，然后取小间隔
+                  Y.remove(Y[-1])
+                  VX.remove(VX[-1])
+                  VY.remove(VY[-1])
+                  T.remove(T[-1])
+                  x=X[-1]
+                  y=Y[-1]
+                  vx=VX[-1]
+                  vy=VY[-1]
+                  deta1=deta/100   
+                  while x**2+y**2>=1:    
+                        x=x+vx*deta1
+                        y=y+vy*deta1
+                        vx=vx
+                        vy=vy
+                        t=t+deta1
+                        X.append(x)  #数组的最后一个值为小步长达到的界外x,y坐标
+                        Y.append(y)
+                        VX.append(vx)
+                        VY.append(vy)       
+                        T.append(t)
+                  else:     #以小步长达到界外后，计算内圆反射之后的水平，竖直速度
+                        e=(y**2-x**2)*vx-2*x*y*vy    #与边界有关，核心计算式
+                        f=(x**2-y**2)*vy-2*x*y*vx
+                        vx=e
+                        vy=f
+                        x=x+vx*deta
+                        y=y+vy*deta
+                        t=t+deta
+                        X.append(x)  #此时记录的是以原步长进行移动的坐标（返回界内）
+                        Y.append(y)
+                        VX.append(x)
+                        VY.append(y)
+                        T.append(t)
+                
+             elif x**2+y**2>=1 and abs(x)>a/2 and abs(y)<=a/2:#第二种：与左右碰撞
+              X.remove(X[-1])
+              Y.remove(Y[-1])
+              VX.remove(VX[-1])
+              VY.remove(VY[-1])
+              T.remove(T[-1])
+    
+              x=X[-1]
+              y=Y[-1]
+              vx=VX[-1]
+              vy=VY[-1]
+              deta1=deta/100 
+              while abs(x)<=a/2 and abs(y)<=a/2:
+                  x=x+vx*deta1
+                  y=y+vy*deta1
+                  vx=vx
+                  vy=vy
+                  t=t+deta1
+    
+                  X.append(x)  #数组的最后一个值为小步长达到水平界外
+                  Y.append(y)
+                  VX.append(vx)
+                  VY.append(vy)
+                  T.append(t)
+              else:          #以小步长达到界外后，需要计算与左右壁反射之后的状态                
+                  vx=-vx
+                  vy=vy
+                  x=x+vx*deta
+                  y=y+vy*deta
+                  t=t+deta
+                  X.append(x)  #，此时记录的是以原步长进行移动的坐标（返回界内）
+                  Y.append(y)
+                  VX.append(x)
+                  VY.append(y)
+                  T.append(t)
+                  
+             elif x**2+y**2>=1 and abs(x)<=a/2 and abs(y)>a/2:#第三种：与上下壁碰撞
+                  X.remove(X[-1])
+                  Y.remove(Y[-1])
+                  VX.remove(VX[-1])
+                  VY.remove(VY[-1])
+                  T.remove(T[-1])
+                  x=X[-1]
+                  y=Y[-1]
+                  vx=VX[-1]
+                  vy=VY[-1]
+                  deta1=deta/100
+                  while abs(x)<=a/2 and abs(y)<=a/2:
+                       x=x+vx*deta1
+                       y=y+vy*deta1
+                       vx=vx
+                       vy=vy
+                       t=t+deta1
+                       X.append(x)  #数组的最后一个值为小步长达到上下界外
+                       Y.append(y)
+                       VX.append(vx)
+                       VY.append(vy)
+                       T.append(t)
+                  else:              
+                       vx=vx
+                       vy=-vy
+                       x=x+vx*deta
+                       y=y+vy*deta
+                       t=t+deta
+                       X.append(x)  #，此时记录的是以原步长进行移动的坐标（返回界内）
+                       Y.append(y)
+                       VX.append(x)
+                       VY.append(y)
+                       T.append(t)
+                       
+             else:#第四种：与顶角碰撞    
+                  X.remove(X[-1])
+                  Y.remove(Y[-1])
+                  VX.remove(VX[-1])
+                  VY.remove(VY[-1])
+                  T.remove(T[-1])
+                  x=X[-1]
+                  y=Y[-1]
+                  vx=VX[-1]
+                  vy=VY[-1]
+                  deta1=deta/100
+                  while abs(x)<=a/2 and abs(y)<=a/2:
+                       x=x+vx*deta1
+                       y=y+vy*deta1
+                       vx=vx
+                       vy=vy
+                       t=t+deta1  
+                       X.append(x)  #数组的最后一个值为小步长达到上下界外
+                       Y.append(y)  
+                       VX.append(vx)
+                       VY.append(vy)
+                       T.append(t)
+                  else:#几乎撞到顶角上
+                      vx=-vx
+                      vy=-vy
+                      x=x+vx*deta
+                      y=y+vy*deta
+                      t=t+deta
+                      X.append(x)  
+                      Y.append(y)
+                      VX.append(x)
+                      VY.append(y)
+                      T.append(t) 
+                  
+                    
+    else:
+           pl.figure(figsize=(16,8)) 
+
+           pl.subplot(1,2,1)
+           pl.title('Circular Interior',size=15)
+           pl.xlabel('x',size=14)
+           pl.ylabel('y',size=14)
+           pl.xlim(-a/2,a/2)
+           pl.ylim(-a/2,a/2)
+           pl.plot(X,Y,color='g',linewidth=0.5,label=a)
+           pl.legend(loc='upper left')
+           
+           
+           i=1
+           X1=[]
+           VX1=[]
+
+           while i<=len(Y)-1:
+                  if Y[i-1]*Y[i]<0:
+                      m=X[i-1]*Y[i]-X[i]*Y[i-1]
+                      n=Y[i]-Y[i-1]
+                      X1.append(m/n)
+                      VX1.append(VX[i-1])
+                      i=i+1
+                  else:
+                      i=i+1
+           j=1                   
+           while j<=len(Y):
+                   if Y[j-1]==0:
+                      X1.append(X[j-1])
+                      VX1.append(VX[j-1])
+                      j=j+1
+                   else:
+                      j=j+1
+                   
+           pl.subplot(1,2,2)
+           pl.title('Phase-Space',size=15)
+           pl.xlabel('x',size=14)
+           pl.ylabel('vx',size=14)
+           pl.xlim(-a/2,a/2)
+           
+           pl.scatter(X1,VX1,color='r',marker='o',s=1,label=a)
+           pl.legend(loc='upper left')           
+           pl.show()
+           return 0  
+       
+A(-1.1,1.1,1,0.7,4,700)#倒数第二个参数必须大于2，前两个坐标确定的位置必须在圆外
+    #A(x,y,vx,vy,a,TS):
