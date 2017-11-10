@@ -13,4 +13,5 @@
 
 
 >- [question 3.29 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.29code.txt)
+>- [question 3.31 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.31code.txt)
 
