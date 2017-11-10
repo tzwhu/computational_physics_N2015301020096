@@ -9,6 +9,7 @@
 >- [x] [Question 3.16](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.16.md)
 >- [x] [Question 3.29](https://www.zybuluo.com/13277058917/note/939320)
 >- [question 3.29 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.29code.txt)
+>- [x] [Question 3.31](https://www.zybuluo.com/13277058917/note/946142)
 
 >* [Exercise:The decay of two kinds of particles](https://www.zybuluo.com/mdeditor#882113)<br>
 >* [Exercise:Population growth](https://www.zybuluo.com/mdeditor#882120)<br>
