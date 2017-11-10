@@ -8,13 +8,9 @@
 >- [x] [Question 2.21](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/Question%202.21.md)
 >- [x] [Question 3.16](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.16.md)
 >- [x] [Question 3.29](https://www.zybuluo.com/13277058917/note/939320)
->- [question 3.29 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.29code.txt)
 >- [x] [Question 3.31](https://www.zybuluo.com/13277058917/note/946142)
 
->* [Exercise:The decay of two kinds of particles](https://www.zybuluo.com/mdeditor#882113)<br>
->* [Exercise:Population growth](https://www.zybuluo.com/mdeditor#882120)<br>
->* [Exercise:The cannon](https://www.zybuluo.com/mdeditor#882138)<br>
->* [Exercise:The spin of baseball and Visual motion of baseball](https://www.zybuluo.com/mdeditor#882149)<br>
->* [Exercise:Non-linear oscillator](https://www.zybuluo.com/mdeditor#882152)<br>
->* [Exercise:Strange attractor ](https://www.zybuluo.com/mdeditor#882153)<br>
->* [Exercise:Billiard ball on diverse table](https://www.zybuluo.com/mdeditor#882157)<br>
+
+
+>- [question 3.29 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.29code.txt)
+
