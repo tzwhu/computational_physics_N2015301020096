@@ -1,0 +1,42 @@
+background_image_filename = 'background.png'
+mouse_image_filename = 'hero.png'
+c_image_filename = 'c.png'
+
+ 
+import pygame 
+from sys import exit 
+ 
+pygame.init() 
+screen = pygame.display.set_mode((1000, 1000), 0, 0)
+pygame.display.set_caption("gravity")
+pygame.mouse.set_visible(False)
+ 
+background = pygame.image.load(background_image_filename).convert()
+mouse_cursor = pygame.image.load(mouse_image_filename).convert_alpha()
+c = pygame.image.load(c_image_filename).convert_alpha()
+
+
+x, y = 0,0 #初始化坐标
+vx,vy = 0.1,0.1#初始化速度
+deta=1
+clock = pygame.time.Clock()
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit()
+    time_passed = clock.tick(100)
+    second = time_passed/1000.0
+    screen.blit(background, (0,0))
+    x1, y1 = pygame.mouse.get_pos()
+    
+    
+    vx=vx+50*second *(x-1)
+    vy=vy+50*second *(y-1)
+    x=x+vx*deta
+    y=y+vy*deta
+    
+    screen.blit(c, (x, y))
+ 
+    pygame.display.update()
+    #刷新一下画面
