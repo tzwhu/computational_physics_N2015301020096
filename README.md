@@ -10,9 +10,11 @@
 >- [x] [Question 3.29](https://www.zybuluo.com/13277058917/note/939320)
 >- [x] [Question 3.31](https://www.zybuluo.com/13277058917/note/946142)
 >- [x] [pygame](https://www.zybuluo.com/13277058917/note/947293)
+>- [x] [Question 4.16](https://www.zybuluo.com/13277058917/note/971551)
 
 
 
 >- [question 3.29 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.29code.txt)
 >- [question 3.31 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.31code.txt)
+>- [question 4.16 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/4.16code.txt)
 
