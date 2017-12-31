@@ -19,4 +19,4 @@
 >- [question 4.16 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/4.16.txt)
 >- [question 5.3 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/5.3code.txt)
 >- [question 6.2 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/6.2code.txt)
->- [期末作业-随机系统]()
+>- [期末作业-随机系统](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86%E6%9C%9F%E6%9C%AB-%E9%9A%8F%E6%9C%BA%E7%B3%BB%E7%BB%9F-15%E7%BA%A7%E5%94%90%E5%93%B2.pdf)
