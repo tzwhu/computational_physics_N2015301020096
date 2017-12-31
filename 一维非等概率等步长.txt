@@ -1,0 +1,52 @@
+import pylab as pl     #一维非等概率随机行走
+import numpy as np
+import random
+
+pl.figure(figsize=(11,8))                      #得到x-t图像
+pl.title('Random walk in one dimension',size=18)   
+pl.xlabel('step number(=time)',size=16)
+pl.ylabel("${x^2}/{m^2}$",size=16)
+pl.xlim(0,100)
+pl.ylim(0,10000)
+    
+    
+def u(m,NS,p):
+    num=np.zeros((m,1+NS))
+    nt=1
+    squ=[0]
+    N=[0]
+    for i in range(1,NS+1):
+        N.append(i)
+    else:
+        N=N    
+    
+
+    while nt<=NS:
+        b=0
+        for i in range(1,m+1):#正常序号,矩阵中的位置会在括号里调整
+            d=random.uniform(0,1)
+            if d<p:
+                num[i-1,nt]=num[i-1,nt-1]-1
+            else:
+                num[i-1,nt]=num[i-1,nt-1]+1
+                
+            b=b+(num[i-1,nt])**2
+        else:
+             squ.append(b/m)
+             nt=nt+1
+    else: 
+        q=str(p)
+        pl.scatter(N,squ,marker='o',s=10,label="$p_{l}$="+q)
+    #pl.text(60,200,"$P_l=0.25,P_r=0.75$",size=25)
+        pl.legend(loc=0, numpoints=1)    #调节legend的字体大小
+        leg = pl.gca().get_legend()
+        ltext  = leg.get_texts()
+        pl.setp(ltext, fontsize='xx-large')
+
+
+p=0
+for i in range(0,6):  
+  u(500,99,i/10)
+else:
+    pl.show()
+    print("over")
