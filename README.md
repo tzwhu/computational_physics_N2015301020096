@@ -17,7 +17,7 @@
 >- [x] [Question 4.16三体问题
 ](https://www.zybuluo.com/13277058917/note/971551)
 >- [x] [Question 5.3  电势与电场](https://www.zybuluo.com/13277058917/note/979780)
->- [x] [Question 6.2](https://www.zybuluo.com/13277058917/note/986813)
+>- [x] [Question 6.2 波浪](https://www.zybuluo.com/13277058917/note/986813)
 
 >- [question 3.29 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.29code.txt)
 >- [question 3.31 code](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.31code.txt)
