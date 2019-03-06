@@ -5,12 +5,17 @@
 >- [x] [Question 1.5](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/Question%201.5.md)
 >- [x] [pygame:  cannon](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/pygame.md)
 >- [x] [Question 2.11](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/question2.11.md)
->- [x] [Question 2.21](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/Question%202.21.md)
->- [x] [Question 3.16](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.16.md)
->- [x] [Question 3.29](https://www.zybuluo.com/13277058917/note/939320)
->- [x] [Question 3.31](https://www.zybuluo.com/13277058917/note/946142)
+>- [x] [Question 2.21弧线球的轨迹问题
+](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/Question%202.21.md)
+>- [x] [Question 3.16混沌问题（一）
+](https://github.com/tzwhu/computational_physics_N2015301020096/blob/master/3.16.md) 
+>- [x] [Question 3.29混沌问题
+](https://www.zybuluo.com/13277058917/note/939320)
+>- [x] [Question 3.31反射问题
+](https://www.zybuluo.com/13277058917/note/946142)
 >- [x] [pygame](https://www.zybuluo.com/13277058917/note/947293)
->- [x] [Question 4.16](https://www.zybuluo.com/13277058917/note/971551)
+>- [x] [Question 4.16三体问题
+](https://www.zybuluo.com/13277058917/note/971551)
 >- [x] [Question 5.3  电势与电场](https://www.zybuluo.com/13277058917/note/979780)
 >- [x] [Question 6.2](https://www.zybuluo.com/13277058917/note/986813)
 
